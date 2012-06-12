@@ -44,5 +44,5 @@ class MainHandler(Handler):
 
     def post(self):
         pass
-
-app = webapp2.WSGIApplication([('/unit3/blog/newpost', NewHandler), ('/unit3/blog', HomeHandler), (r'/unit3/blog/(\d+)', SingleHandler)], debug=True)
+# Can also include uri mappings in the form of regular expressions: 'r'/unit3/blog/(\d+)'
+app = webapp2.WSGIApplication([('/', MainHandler)], debug=True)
